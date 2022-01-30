@@ -1,8 +1,6 @@
 # FinancialPlanner---TamuHACK
 
-A financial planner that allows students to input
-
-
+A financial planner that allows students to input their "perfect" budget, and then compare it too their actual expenses.
 
 
 
