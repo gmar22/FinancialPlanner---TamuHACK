@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<body>
+<h1>Actual Expenses</h1>
+
+</body>
+
+<html>
+<style>
+  body{
+    background-color: rgb(231, 188, 96);
+  }
+
+
+
+
+</style>
+
+
+
+  <form action="/work2" method = "POST">
+    <p>Amount ($) <input type = "text" name = "Name" /></p>
+    <p>Type <input type = "text" name = "City" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+
+    </form>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Python Flask Show Data on Google Pie Chart</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript'>
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data2 = google.visualization.arrayToDataTable([
+            {% for key, value in data2.items() %}
+                {% if value is string %}
+                    ['{{ key }}', '{{ value }}'],
+                {% else %}
+                    ['{{ key }}', {{ value }}],
+                {% endif %}
+
+            {% endfor %}
+        ]);
+ 
+        var options = {
+          title: '',
+          is3D: true,
+          //pieHole: 0.5
+          pieStartAngle: 100
+          /*slices: {  
+            2: {offset: 0.2},
+            3: {offset: 0.3}
+          }*/
+          /*slices: {
+            1: { color: 'transparent' }
+          }*/
+        };
+ 
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data2, options);
+      }
+    </script>
+</head>
+<body>
+    <div style="margin: 10px 0 0 10px;width: 1000px">
+        <h3>Expense Distribution</h3>
+        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div>
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+<form action="/work4" method = "POST">
+   
+    <p><input type = "submit" value = "Income" /></p>
+</form>

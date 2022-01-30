@@ -1,0 +1,75 @@
+<head>
+    <title>Front Page</title>
+    
+    <style>
+        body{
+            background-color: rgb(126, 141, 184);
+        }
+
+    p.ex1 {
+        font-size: 60px;
+        margin-top: 50px;
+        
+    }
+    p.ex2 {
+        font-style: italic;
+        font-size: 40px;
+        text-decoration: underline;    
+        text-decoration-color: white; 
+        text-underline-offset: 4px;
+        font-family: Geneva;
+
+        
+    }
+    .card {
+    max-width: 400x;
+    margin: auto;
+    text-align: center;}
+    #main{
+    background-image: url('randoCollege.jpg');
+    color: white;
+    text-shadow: 
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    .create {
+    color: white;
+    margin-top:250px;
+    font-size: 18px;
+    }
+    .signIn {
+    color: white;
+    margin-top:50px;
+    font-size: 18px;
+    }
+    .card button {
+    
+    size: 40px;
+    padding:10px;
+    margin-top:10px;
+    color: white;
+    background-color: orange;
+    text-align: center; }
+    </style>
+    </head>
+    <body id="main">
+    <div class="card">
+    
+    <h1><b><p class="ex1" >Budgeting For College Students --</p></b></h1>
+    <h2><b><p class="ex2" >Made Easier</p></b></h2>
+    <h2 class="create">Make an account</h2>
+    <h2>
+    <ul>
+    </ul>
+    </h2>
+    <p><button><a href="{{ url_for('sign_in') }}">Click Here!</a></button></p>
+    <h2 class="SignIn">Sign In</h2>
+    <p><button><a href="{{ url_for('sign_in') }}">Click Here!</a></button></p>
+    </div>
+    </body>
