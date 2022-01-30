@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<body>
+    <form method="post">
+    </form>
+
+<head>
+</head>
+<h3>Sign-Up</h3>
+
+<style>
+
+    body{
+        background-color: rgb(126, 141, 184);
+    }
+</style>
+
+
+<body>
+{% for question in questions %}
+    {{question.name}}:{{question.email}}:{{question.password}}: {{question.question}}<br>{% endfor %}
+<form action="/first" method="POST">
+First Name: <input type=text name='name'><br>
+Last Name: <input type=text name='ques'><br>
+Email: <input type=text name='jeff'><br>
+Password: <input type=text name='jeff'><br>
+
+<input type=submit name='submit'>
+</form>
+
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+input[type=text], select, textarea {
+width: 100%;
+padding: 8px;
+/* border: 1px solid #ccc; */
+margin-top: 4px;
+margin-bottom: 10px;
+}
+/* input[type=submit] { */
+/* background-color:White; */
+/* padding: 8px 8px; */
+/* } */
+/* .container {
+width:100%;
+border-radius: 6px;
+background-color: #EFF6F6;
+padding: 10px; */
+/* } */
+</style>
+</head>
+<body>
+<div class="container">
+
+
+</form>
+</div>
+</body>
+</html>
